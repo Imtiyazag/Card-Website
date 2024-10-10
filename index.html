@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+   <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.order-summary {
+    width: 50%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+
+.test-mode {
+    background-color: yellow;
+    color: #000;
+    padding: 5px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.item-details p {
+    margin: 0;
+}
+
+
+.summary-details {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+}
+
+.summary-details p {
+    margin: 5px 0;
+}
+
+
+.payment-form {
+    width: 50%;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.apple-pay-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.apple-pay-btn:hover {
+    background-color: #333;
+}
+
+
+.pay-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.pay-btn:hover {
+    background-color: #333;
+}
+
+
+.payment-details label {
+    display: block;
+    margin-top: 10px;
+}
+   </style>
+</head>
+<body>
+
+
+<div class="checkout-container">
+    
+    
+    <div class="order-summary">
+        <h2>Pay Powdur</h2>
+       
+        
+        
+        
+        <div class="item">
+            <img src="/Asset/powder1.jpeg" alt="Pure Set">
+            <div class="item-details">
+                <p>Pure Set</p>
+                <p>$65.00</p>
+            </div>
+        </div>
+        
+        
+        <div class="item">
+            <img src="/Asset/powder2.jpeg" alt="Pure Glow Cream">
+            <div class="item-details">
+                <p>Pure Glow Cream (Qty 2)</p>
+                <p>$64.00</p>
+            </div>
+        </div>
+
+       
+        <div class="summary-details">
+            <p>Subtotal: $129.00</p>
+            <p>Shipping: $5.00</p>
+            <p>Total: $134.00</p>
+        </div>
+    </div>
+    
+   
+    <div class="payment-form">
+       
+        <button class="apple-pay-btn">Apple Pay</button>
+        
+        <p>Or pay with card</p>
+        
+        
+        <div class="shipping-info">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Address">
+            <input type="text" placeholder="City">
+            <input type="text" placeholder="Postal Code">
+        </div>
+        
+        
+        <div class="payment-details">
+            <input type="text" placeholder="Card Number">
+            <input type="text" placeholder="MM/YY">
+            <input type="text" placeholder="CVC">
+           
+            <label>
+                <input type="checkbox" checked> Billing address is same as shipping
+            </label>
+        </div>
+        
+       
+        <button class="pay-btn">Pay $134.00</button>
+    </div>
+</div>
+
+
+<script>
+
+document.querySelector('.pay-btn').addEventListener('click', function() {
+    alert('Payment process initiated!');
+});
+</script>
+</body>
+</html>
